@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="writerMapper">
+	
+	<resultMap id="board" type="com.project.model.BoardVO">
+		<result property="writeNo" column="write_no"/>
+		<result property="writerId" column="writer_id"/>
+		<result property="suggestionName" column="suggestion_name"/>
+		<result property="contents" column="contents"/>
+		<result property="penName" column="pen_name"/>
+		<result property="writeDate" column="write_date"/>
+		<result property="emotionCode" column="emotion_code"/>
+		<result property="emotionName" column="emotion_name"/>
+		<result property="suggestionCode" column="suggestion_code"/>
+		<result property="shareStatus" column="share_status"/>
+	</resultMap>
+	
+	<!-- 
+	<select id="selectMember" parameterType="String" resultType="ucamp.dao.MemberVO">
+		select member_id as memberId, pw, name from member_data where
+		member_id= #{id}
+	</select>
+	<select id="selectMemberWithoutPw" parameterType="String" resultType="ucamp.dao.MemberVO">
+		select member_id as memberId, name from member_data where
+		member_id= #{id}
+	</select>
+
+	<select id="selectMemberList" resultType="ucamp.dao.MemberVO">
+		select member_id as memberId, name from member_data
+	</select>
+	-->
+	
+	<select id="selectFriendsBoards" resultMap="board">
+		SELECT b.write_no AS write_no,
+			   b.writer_id AS write_id,
+			   s.suggestion_name AS suggestion_name,
+			   b.contents AS contents,
+			   a.pen_name AS pen_name,
+			   b.write_date AS write_date,
+			   e.emotion_code AS emotion_code,
+			   e.emotion_name AS emotion_name  
+		FROM app_user a,
+			 board b,
+			 suggestion s,
+			 emotion e,
+			 follow_list fl
+		WHERE b.writer_id = a.user_id  
+		AND b.suggestion_code = s.suggestion_code  
+		AND a.user_id = fl.followee_id 
+		AND e.emotion_code = s.emotion_code 
+		AND b.share_status = '전체' 
+		AND fl.follower_id=#{follower_id}
+		ORDER BY write_date DESC
+	</select>
+	 
+	<select id="selectBoardDetails" resultMap="board">
+		SELECT 
+			b.write_no AS write_no
+			, b.writer_id AS writer_id
+			, s.suggestion_name AS suggestion_name
+			, b.contents AS contents
+			, a.pen_name AS pen_name
+			, b.write_date AS write_date
+			, e.emotion_code AS emotion_code
+			, e.emotion_name AS emotion_name
+		FROM app_user a, board b, suggestion s, emotion e
+		WHERE b.writer_id = a.user_id 
+		AND b.suggestion_code = s.suggestion_code 
+		AND e.emotion_code = s.emotion_code
+		AND b.write_no=#{writeNo}
+	</select>
+	 
+	<!-- 
+	AND fl.follower_id = 'test2'
+	<insert id="addMember" parameterType="ucamp.dao.MemberVO">
+		insert into member_data(member_id, pw, name) values (#{memberId}, #{pw}, #{name})
+		INSERT INTO follow_list(follow_no, followee_id, follower_id, follow_date) VALUES(#{followNo}, #{follweeId}, #{follower_id}, sysdate);
+	</insert>
+	 -->
+	 
+	
+	<!-- 
+	<update id="updateMember" parameterType="ucamp.dao.MemberVO">
+		update member_data set pw=#{pw} where member_id=#{memberId}
+	</update>
+	
+	<delete id="removeMember" parameterType="String">
+		delete from member_data where member_id=#{memberId}
+	</delete>
+	 -->
+	 
+</mapper>

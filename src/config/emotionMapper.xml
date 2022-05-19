@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="emotionMapper">
+	
+	<select id="selectRandomEmotionName" resultType="string" parameterType="string">
+		SELECT emotion_name 
+		FROM (SELECT * FROM emotion WHERE main_emotion=#{mainEmotion} ORDER BY dbms_random.random) 
+		WHERE rownum = 1
+	</select>
+	
+	<select id="setlectMyEmotionName" resultType="string" parameterType="string">
+		SELECT emotion_code 
+		FROM empathy where user_id = #{id}
+		AND to_char(empathy_date,'yyyy-mm-dd') = to_char(sysdate,'yyyy-mm-dd')
+	</select>
+	
+	<!-- 
+	<select id="selectMember" parameterType="String" resultType="ucamp.dao.MemberVO">
+		select member_id as memberId, pw, name from member_data where
+		member_id= #{id}
+	</select>
+	<select id="selectMemberWithoutPw" parameterType="String" resultType="ucamp.dao.MemberVO">
+		select member_id as memberId, name from member_data where
+		member_id= #{id}
+	</select>
+
+	<select id="selectMemberList" resultType="ucamp.dao.MemberVO">
+		select member_id as memberId, name from member_data
+	</select>
+	-->
+	<!--  
+	<select id="selectFollowList" resultType="com.project.model.FollowListVO">
+		  SELECT 
+		  fl.follow_no AS follow_no
+		  , to_char(fl.follow_date, 'yyyy.mm.dd') AS follow_date
+		  , fl.followee_id AS followee_id
+		  , fl.follower_id AS follower_id
+		  , a.pen_name AS followee_pen_name
+	      FROM follow_list fl, app_user a
+	      WHERE fl.followee_id = a.user_id
+	</select>
+	 -->
+	
+	<!-- 
+	AND fl.follower_id = 'test2'
+	<insert id="addMember" parameterType="ucamp.dao.MemberVO">
+		insert into member_data(member_id, pw, name) values (#{memberId}, #{pw}, #{name})
+		INSERT INTO follow_list(follow_no, followee_id, follower_id, follow_date) VALUES(#{followNo}, #{follweeId}, #{follower_id}, sysdate);
+	</insert>
+	 -->
+	
+	<!-- 
+	<update id="updateMember" parameterType="ucamp.dao.MemberVO">
+		update member_data set pw=#{pw} where member_id=#{memberId}
+	</update>
+	
+	<delete id="removeMember" parameterType="String">
+		delete from member_data where member_id=#{memberId}
+	</delete>
+	 -->	 
+	 
+</mapper>
+
+
+
+
+
+
+
