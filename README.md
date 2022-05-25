@@ -65,11 +65,6 @@ https://user-images.githubusercontent.com/58901024/169180982-eded01ea-d493-4f14-
 
 <img width="1295" alt="image" src="https://user-images.githubusercontent.com/58901024/170381907-42280bbb-52a8-453f-b3ae-0e2abf6df40a.png">
 
-![KakaoTalk_20220523_101239119_02](https://user-images.githubusercontent.com/58901024/169734337-3dbb8579-4fe6-4356-bb8c-96c3fbf23ced.jpg)
-
-![KakaoTalk_20220523_101239119_01](https://user-images.githubusercontent.com/58901024/169734320-4b5f3020-92d9-41d6-9099-4e1b399d2fa4.jpg)
-
-![KakaoTalk_20220523_101239119](https://user-images.githubusercontent.com/58901024/169734329-4e2758bd-3129-4a9b-aa62-3aeb3a557ae8.jpg)
 
 ## 6. 구현 산출물
 
@@ -82,8 +77,7 @@ https://user-images.githubusercontent.com/58901024/169180982-eded01ea-d493-4f14-
 
 
 ## 7. 팀 후기
+### 이식성 있게 UI 를 설계하고 인수테스트에 반영함
 <img width="1295" alt="image" src="https://user-images.githubusercontent.com/58901024/170382160-03930251-03be-4045-a5a1-14e9b52e7463.png">
 
-
-## 7. 팀 후기
 
