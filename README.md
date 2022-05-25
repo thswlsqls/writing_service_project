@@ -36,9 +36,13 @@
 ## 4. 배포환경
 --------
 Database : Oracle Cloud
+
 Server Instance : AWS
+
 Web Server : Apache Tomcat 9.0
+
 etc : ctontab, shellscript, iptables 등 활용해 자동화, 포트포워딩 설정함
+
 <img width="1295" alt="image" src="https://user-images.githubusercontent.com/58901024/170381810-514204fa-151d-4485-96fa-2fb87b4fe7b4.png">
 
 <img width="1295" alt="image" src="https://user-images.githubusercontent.com/58901024/170381819-24bd34f3-bd81-419d-b573-7769662d9d6d.png">
@@ -77,5 +81,9 @@ https://user-images.githubusercontent.com/58901024/169180982-eded01ea-d493-4f14-
 
 
 
+## 7. 팀 후기
+<img width="1295" alt="image" src="https://user-images.githubusercontent.com/58901024/170382160-03930251-03be-4045-a5a1-14e9b52e7463.png">
 
+
+## 7. 팀 후기
 
