@@ -1,6 +1,12 @@
 # writing_service_project
 
-자바언어와 오라클 데이터베이스를 사용한 글쓰기 서비스입니다.
+---------
+## 1. 개요
+---------
+자바언어와 오라클 데이터베이스를 사용한 글쓰기 서비스입니다. 
+사용자의 감정 응답에 따라 글감을 제공하고 타인의 글에 반응을 등록할 수 있습니다.
+
+
 
 
 [4팀_업무리스트.xlsx](https://github.com/thswlsqls/writing_service_project/files/8721893/4._.xlsx)
