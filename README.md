@@ -77,7 +77,7 @@ https://user-images.githubusercontent.com/58901024/169180982-eded01ea-d493-4f14-
 
 
 ## 7. 팀 후기
-### 이식성 있게 UI 를 설계하고 인수테스트에 반영함
+### 이식성 있게 UI 를 설계하고 인수테스트 후 수정사항에 반영함
 <img width="1295" alt="image" src="https://user-images.githubusercontent.com/58901024/170382160-03930251-03be-4045-a5a1-14e9b52e7463.png">
 
 
