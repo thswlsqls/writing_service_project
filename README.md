@@ -40,7 +40,7 @@
 --------
 ## 4. 배포환경
 --------
-Database : Oracle Cloud
+Database : Oracle Cloud(무료 DB, 90일 후 삭제됨)
 
 Server Instance : AWS
 
